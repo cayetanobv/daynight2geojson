@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 #  Author: Cayetano Benavent, 2015.
+#  https://github.com/GeographicaGS/daynight2geojson
 #  
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -16,20 +17,11 @@
 #  along with this program; if not, write to the Free Software
 #  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #  MA 02110-1301, USA.
-# 
+#
 
 
-from datetime import datetime
+__version__ = '0.1'
+
+__all__ = ['daynight2geojson']
+
 from daynight2geojson import DayNight2Geojson
-
-# Filepath to output GeoJSON
-filepath = '/tmp/day_night.geojson'
-
-# input_date = None is for UTC now date
-# For others input date: datetime object must be passed
-#       datetime(year, month, day, hour, minute)
-input_date = datetime(2015, 1, 15, 00, 00)
-
-dn = DayNight2Geojson(filepath, input_date=input_date)
-#dn = DayNight2Geojson(filepath) # comment above line and uncomment this line to compute UTC now date
-dn.getDayNight()
